@@ -1,0 +1,12 @@
+apiVersion: 1
+
+contactPoints:
+  - orgId: 1
+    name: email-local-mailhog
+    receivers:
+      - uid: email-local-mailhog-receiver
+        type: email
+        settings:
+          addresses: devops@local.test
+          singleEmail: false
+        disableResolveMessage: false
