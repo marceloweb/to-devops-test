@@ -24,7 +24,28 @@ O objetivo é demonstrar, de forma prática, conceitos fundamentais de:
 
 ---
 
-## 🏗️ Arquitetura
+##  Como rodar localmente
+
+1. Garantir que os pré-requisitos estejam instalados: Docker e Docker Composer.
+2. Clonar o projeto do repositório no GitHub.
+3. Rodar o seguinte comando no terminal:
+
+```bash
+$ docker-compose up -d
+```
+
+Datasources, dashboards e alerts já estão configurados. 
+
+4. Acessar via browser:  ou via curl
+
+App1: http://localhost:8080/text
+App2: http://localhost:8081/text
+Grafana: http://localhost:3000
+MailHog: http://localhost:8025/
+
+---
+
+##  Arquitetura
 
 <p align="center">
   <img src="docs/architecture.png" width="900"/>
@@ -129,3 +150,22 @@ Envio via:
 - 📧 Email (MailHog)
 
 Interface MailHog:
+
+### 🔹 TO DO
+
+- Adicionar tracing distribuído (OpenTelemetry + Tempo)
+- Centralizar logs com Loki
+- Criar API Gateway
+- Implementar autenticação entre serviços
+- Adicionar testes automatizados
+- Criar pipeline CI/CD
+- Deploy em Kubernetes (Helm/Terraform)
+- Configurar autoscaling baseado em métricas
+- Melhorar estratégia de cache (invalidação)
+- Adicionar rate limiting
+
+---
+
+### 👥 Autor
+
+- Marcelo Lopes Oliveira - [@marceloweb](https://www.linkedin.com/in/marceloweb/)
